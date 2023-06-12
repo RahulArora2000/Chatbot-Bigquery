@@ -96,7 +96,7 @@ def hello_world(request):
     if request_json and 'text' in request_json:
         text = request_json['text']
 
-        table_Name = "supply-chain-twin-349311.SLT_L2_Canonical.orderSN"
+        table_Name = "Table name from BQ "
 
         if table_Name in cache:
             cols = cache[table_Name]
@@ -114,7 +114,7 @@ def hello_world(request):
 
         model_output = predict_large_language_model_sample(
             input_text,
-            "supply-chain-twin-349311",
+            "YOUR Accessed account id for using vertex AI model",
             "chat-bison@001",
             0.2,
             1000,
@@ -139,7 +139,7 @@ def hello_world(request):
 
         final_model_output = predict_large_language_model_sample(
             final_text,
-            "supply-chain-twin-349311",
+            "YOUR Accessed account id for using vertex AI model",
             "chat-bison@001",
             0.2,
             1000,
